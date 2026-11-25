@@ -128,3 +128,64 @@
     @apply font-sans;
   }
 }
+
+@theme static {
+  --color-arc-bg: #0d0b1a;
+  --color-arc-panel: #17142b;
+  --color-arc-mint: #3dffd0;
+  --color-arc-pink: #ff5fa8;
+  --color-arc-yellow: #ffd23f;
+  --color-arc-cyan: #35d0ff;
+  --color-arc-text: #f2efff;
+}
+
+@theme inline {
+  --font-pixel: var(--font-pixel-src);
+  --font-terminal: var(--font-terminal-src);
+  --font-body: var(--font-body-src);
+}
+
+.bg-dots {
+  background-image: radial-gradient(rgba(242, 239, 255, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(61, 255, 208, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(61, 255, 208, 0.1) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.bg-scanlines {
+  background-color: rgba(53, 208, 255, 0.03);
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(53, 208, 255, 0.08) 0 2px,
+    transparent 2px 4px
+  );
+}
+
+.bg-stars {
+  background-image:
+    radial-gradient(2px 2px at 20px 30px, #ffd23f, transparent),
+    radial-gradient(2px 2px at 90px 120px, #f2efff, transparent),
+    radial-gradient(1px 1px at 150px 60px, #35d0ff, transparent),
+    radial-gradient(2px 2px at 60px 170px, #ff5fa8, transparent);
+  background-size: 200px 200px;
+}
+
+.bg-stripes {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 95, 168, 0.08) 0 12px,
+    transparent 12px 24px
+  );
+}
+
+.bg-glow {
+  background-image:
+    radial-gradient(circle at 50% 60%, rgba(255, 95, 168, 0.25), transparent 60%),
+    radial-gradient(rgba(242, 239, 255, 0.12) 1px, transparent 1px);
+  background-size: auto, 24px 24px;
+}
